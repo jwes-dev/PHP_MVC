@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.js|\.css|\.eot|\.woff|\.ttf|\.svg)$
+RewriteRule ^(.*)$ StartUp.php?mvc_path=$1 [NC,L,QSA]

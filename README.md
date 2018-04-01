@@ -1,2 +1,4 @@
 # PHP_MVC
-MVC framework as in ASP.NET with basic functionality. If you are a ASP.NET developer and need to build a web app in php, try this. We were ASP.NET developers and had a tough time developing in PHP, SO we thought WHY NOT!
+MVC framework as designed by Microsoft in ASP.NET with basic functionality. 
+If you are an ASP.NET developer and need to build a web app in php, try this. We are ASP.NET developers oursself and had a tough time developing in PHP, So we thought WHY NOT!
+Hence, we made a basic MVC in PHP inspired by ASP.NET MVC. You can contribute your functions by sending the codes in a mail to jwes.device@gmail.com

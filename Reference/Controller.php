@@ -26,5 +26,11 @@ class Controller
             require_once FILES_ROOT.$this->Layout;
         }
     }
+
+    public function JSON($obj)
+    {
+        header("Content-Type: application/json");
+        echo json_encode($obj);
+    }
 }
 ?>

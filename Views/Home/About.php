@@ -1,7 +1,9 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<?php
+    $Context->Title = "About";
+    function RenderBody(){
+?>
 
-<p>Use this area to provide additional information.</p>
+<h2>The Developer</h2>
+
+<p>This framework was developed by John Wesley M</p>
+    <?php } ?>

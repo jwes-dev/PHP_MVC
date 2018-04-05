@@ -1,0 +1,82 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>PHP_MVC</Name>
+    <ProjectGuid>0980fdf6-b884-4012-bf2a-4f154c3abf2c</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>PHP_MVC</AssemblyName>
+    <SpecificPageValue>StartUp.php</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundlesConfig.php" />
+    <Compile Include="App_Start\RouteConfig.php" />
+    <Compile Include="Controllers\SampleController.php" />
+    <Compile Include="Controllers\ErrorController.php" />
+    <Compile Include="Controllers\HomeController.php" />
+    <Compile Include="global.php" />
+    <Compile Include="Models\UserId.php" />
+    <Compile Include="Reference\Context.php" />
+    <Compile Include="Reference\Controller.php" />
+    <Compile Include="Reference\Framework.php" />
+    <Compile Include="Reference\Http.php" />
+    <Compile Include="Reference\OAuth2.php" />
+    <Compile Include="Index.php" />
+    <Compile Include="test.php" />
+    <Compile Include="Views\Error\NotFound.php" />
+    <Compile Include="Views\Home\About.php" />
+    <Compile Include="Views\Home\Contact.php" />
+    <Compile Include="Views\Home\Index.php" />
+    <Compile Include="Views\Shared\Error.php" />
+    <Compile Include="Views\Shared\_Layout.php" />
+    <Compile Include="Views\_ViewStart.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Start\" />
+    <Folder Include="Area\" />
+    <Folder Include="Content\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Models\" />
+    <Folder Include="Reference\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Error\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".htaccess" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="table.sql" />
+  </ItemGroup>
+</Project>

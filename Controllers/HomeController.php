@@ -10,5 +10,10 @@ class HomeController extends Controller
     {
         $this->View();
     }
+
+    public function About()
+    {
+        $this->View();
+    }
 }
 ?>

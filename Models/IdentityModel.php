@@ -63,6 +63,7 @@ class AccountManager
 
     public function StartSession($Email, $Role)
     {
+        session_start();
         $_SESSION["User"] = $Email;
         $_SESSION["Role"] = password_hash($Role, PASSWORD_DEFAULT);
     }
@@ -77,7 +78,7 @@ class AccountManager
             $row = $res->fetch_assoc();
             if(password_verify($password, $row["Secret"]))
             {
-                StartSession();
+                session_start();
                 $_SESSION["User"] = $row["Email"];
                 $q = "SELECT * FROM UserRoles WHERE Email = '$Email'";
                 $res = $this->db->query($q);

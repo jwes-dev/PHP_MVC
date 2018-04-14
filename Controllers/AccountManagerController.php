@@ -39,5 +39,18 @@ class AccountManagerController extends Controller
         }
         $this->View();
     }
+
+    public function ForgotPassword()
+    {
+        if(isset($_POST["submit"]) && isset($_POST["email"]))
+        {
+            if($this->Manager->ChangePassword($_POST["email"]))
+            {
+                $this->View("FollowUp.php");
+            }
+            $Error = "";
+        }
+        $this->View();
+    }
 }
 ?>

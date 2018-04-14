@@ -24,12 +24,11 @@ class AccountManager
     public function ChangePassword($Email)
     {
         $token = $this->GetPasswordChangeToken($Email);
-        Email::Send(
+        return Email::Send(
             $Email,
             "Passsword Reset",
-            "Follow this link to reset your password: http://".APP_ROOT."/AccountManager/ResetPassword?token=$token"
+            "Follow this link to reset your password: http://".Server::MapPath("~/AccountManager/ResetPassword?token=$token", null)
         );
-        return TRUE;
     }
 
     public function GetPasswordChangeToken($Email)

@@ -1,4 +1,10 @@
 <?php
-    define("ROUTES", array("default" => "Home/Index"));
-    define("R_TEMPLATES", array("default" => "Controllers/{controller}/{action}"));
+    define("ROUTES", array(
+        "/" => "Home/Index",
+        "MyApi" => "MyApi/Home/Index"
+    ));
+    define("R_TEMPLATES", array(
+        "{controller}/{action}" => "Controllers/{controller}/{action}",
+        "MyApi/{controller}/{action}" => "Area/StudentApi/Controllers/{controller}/{action}"
+    ));
 ?>

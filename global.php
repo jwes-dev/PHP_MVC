@@ -1,6 +1,6 @@
 <?php
-define("APP_ROOT", "/DocHelper");
-define("FILES_ROOT", $_SERVER["DOCUMENT_ROOT"]."/DocHelper");
+define("APP_ROOT", "/PHP_MVC");
+define("FILES_ROOT", $_SERVER["DOCUMENT_ROOT"]."/PHP_MVC");
 
 define("DB_SERVER", "localhost");
 define("DB_SECRET", "");
@@ -21,9 +21,9 @@ class Server
             {
                 $query += "$v=$val&";
             }
-            $query = substr($query, 0, sizeof($query) - 2);
+            $query = substr($query, 0, strlen($query) - 2);
         }
-        if(substr($path, 0, 2) == "~/" && sizeof($path) == 2)
+        if(substr($path, 0, 2) == "~/" && strlen($path) == 2)
             return APP_ROOT."/?$query";
         else if(substr($path, 0, 2) == "~/")
             return APP_ROOT."/".substr($path, 2)."?$query";
@@ -43,13 +43,5 @@ function NewSQLConnection()
     else{
         return $conn;
     }
-}
-
-
-
-
-function decide()
-{
-    
 }
 ?>

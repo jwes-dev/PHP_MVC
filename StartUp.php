@@ -5,6 +5,7 @@ require_once "Reference/Context.php";
 require_once "Reference/Framework.php";
 require_once "Reference/Http.php";
 require_once "Reference/Auth.php";
+require_once "Reference/DbContext.php";
 
 // APP_START
 require_once "App_Start/BundlesConfig.php";
@@ -17,6 +18,7 @@ require_once "Reference/Mailer/PHPMailerAutoload.php";
 // App Library
 require_once "global.php";
 require_once "Models/IdentityModel.php";
+require_once "Models/chk.php";
 
 // Controllers
 // require_once "Controllers/HomeController.php";

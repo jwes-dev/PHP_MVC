@@ -18,12 +18,12 @@ function RenderSection($name, $required)
 class HTMLHelper{
     public function ActionLink($LinekText, $Action, $Controller, $htmlAttributes = "")
     {
-        echo "<a href=\"".APP_ROOT."$Controller/$Action\" $htmlAttributes>$LinekText</a>\n";
+        echo "<a href=\"".APP_ROOT."/$Controller/$Action\" $htmlAttributes>$LinekText</a>\n";
     }
 
     public function RenderContent($vpath)
     {
-        echo APP_ROOT.$vpath;
+        echo APP_ROOT."/".$vpath;
     }
 }
 
